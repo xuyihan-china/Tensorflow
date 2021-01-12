@@ -8,7 +8,6 @@ window.onload = async () => {
         {values:height.map((x,i)=>({x,y:weight[i]}))},
         {xAxisDomain:[140,180],yAxisDomain:[30,70]}
     )
-    
     const inputs = tf.tensor(height).sub(150).div(20)
     const labels = tf.tensor(weight).sub(40).div(20)//把数据压缩到0-1之间
     const model = tf.sequential()
